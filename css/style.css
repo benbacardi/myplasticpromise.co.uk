@@ -111,6 +111,7 @@ h2 {
         width: 2rem;
         height: 2rem;
         border-radius: 100%;
+        flex-shrink: 0;
 
         &.checked {
             background-image: url(../img/checkbox.svg);
@@ -147,6 +148,12 @@ h2 {
     button:hover {
         opacity: 1;
         cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+        .controls {
+            grid-template-columns: 1fr;
+        }
     }
 
 }
