@@ -1,84 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZXGSFNQD3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZXGSFNQD3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-9ZXGSFNQD3');
-</script>
+        gtag('config', 'G-9ZXGSFNQD3');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Plastic Promise</title>
 
-    <style>
-        :root {
-            --background: #f4f8f7;
-            --primary: #01b5d8;
-            --accent: #02497c;
-            --accent2: #00d98c;
-            --text: #1f2937;
-        }
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <script src="https://unpkg.com/alpinejs" defer></script>
 
-        body {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(
-                135deg,
-                var(--background),
-                #ffffff
-            );
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            color: var(--text);
-        }
-
-        .hero {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        h1 {
-            font-size: clamp(3rem, 10vw, 6rem);
-            font-weight: 800;
-            line-height: 1;
-            color: var(--primary);
-            letter-spacing: -0.04em;
-        }
-
-        .highlight {
-            color: var(--accent);
-        }
-
-	.highlight1 {
-            color: var(--accent2);
-        }
-    </style>
 </head>
+
 <body>
-    <main class="hero">
-        <h1 style="text-decoration: underline">
-            My <span class="highlight1">Plastic</span>
-            <span class="highlight">Promise</span>
+
+    <div class="content">
+
+        <h1>
+            <span class="light-blue">My</span>
+            <span class="bright-green">Plastic</span>
+            <span class="dark-blue">Promise</span>
         </h1>
 
-	<br /><span style="font-size: 3rem;">By Emily, aged 10</span>
+        <div class="header">
+            <h2>Stop plastic pollution!</h2>
+            <p>Plastic pollution is harming animals, humans, and our world.</p>
 
-    </main>
+            <div class="images">
+                <div class="img" style="background-image: url(img/turtle.avif)">&nbsp;</div>
+                <div class="img" style="background-image: url(img/beach.avif)">&nbsp;</div>
+                <div class="img" style="background-image: url(img/earth.avif)">&nbsp;</div>
+            </div>
 
+        </div>
 
+        <div class="promise">
+            <p>If you want to help save the planet, tick a promise and fulfil your duty!</p>
+
+            <ul>
+                <li x-data="{ checked: false }" @click="checked = !checked">
+                    <div>
+                        <strong>I promise</strong> to look after my local area
+                    </div>
+                    <div class="checkbox" :class="{ 'checked': checked }"></div>
+                </li>
+                <li x-data="{ checked: false }" @click="checked = !checked">
+                    <div>
+                        <strong>I promise</strong> to put my litter in the bin or take it home with me
+                    </div>
+                    <div class="checkbox" :class="{ 'checked': checked }"></div>
+                </li>
+                <li x-data="{ checked: false }" @click="checked = !checked">
+                    <div>
+                        <strong>I promise</strong> to go litter picking once a month
+                    </div>
+                    <div class="checkbox" :class="{ 'checked': checked }"></div>
+                </li>
+            </ul>
+
+            <form method="get" action="promise.html">
+                <div class="controls">
+                    <input type="text" placeholder="Enter your name..." name="name" required>
+                    <button type="submit">Make promise</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
 
 </body>
+
 </html>

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+:root {
+    --background-green: #c3efdc;
+    --border-blue: #8fd8d1;
+
+    --light-blue: #01b5d8;
+    --dark-blue: #02497c;
+    --bright-green: #7ec276;
+}
+
+body {
+    font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+    padding: 2rem;
+    background-color: var(--background-green);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Chewy", system-ui;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    color: #02497c;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.light-blue {
+    color: var(--light-blue);
+}
+
+.dark-blue {
+    color: var(--dark-blue);
+}
+
+.bright-green {
+    color: var(--bright-green);
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 1rem;
+    padding-top: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 1rem;
+    border: 2px solid var(--border-blue);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.images {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    margin-top: 1rem;
+
+    .img {
+        height: 10rem;
+        background-size: cover;
+        background-position: center;
+    }
+
+}
+
+.promise {
+    p {
+        font-size: 1.2rem;
+    }
+
+    ul,
+    li {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    li {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 1rem;
+        border: 2px solid var(--border-blue);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .checkbox {
+        border: 2px solid var(--bright-green);
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100%;
+
+        &.checked {
+            background-image: url(../img/checkbox.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: var(--bright-green);
+        }
+    }
+
+    .controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin: 0 2rem;
+    }
+
+    input[type=text] {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: 2px solid var(--border-blue);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 1.2rem;
+    }
+
+    button {
+        background-color: var(--dark-blue);
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 0.5rem;
+        opacity: 0.8;
+    }
+
+    button:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+}
