@@ -8,8 +8,9 @@
     <style>
         :root {
             --background: #f4f8f7;
-            --primary: #0f4c5c;
-            --accent: #2ec4b6;
+            --primary: #01b5d8;
+            --accent: #02497c;
+            --accent2: #00d98c;
             --text: #1f2937;
         }
 
@@ -49,14 +50,21 @@
         .highlight {
             color: var(--accent);
         }
+
+	.highlight1 {
+            color: var(--accent2);
+        }
     </style>
 </head>
 <body>
     <main class="hero">
-        <h1>
-            My Plastic
+        <h1 style="text-decoration: underline">
+            My <span class="highlight1">Plastic</span>
             <span class="highlight">Promise</span>
         </h1>
+
+	<br /><span style="font-size: 3rem;">By Emily, aged 10</span>
+
     </main>
 </body>
 </html>
