@@ -13,6 +13,10 @@ body {
     font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
     padding: 2rem;
     background-color: var(--background-green);
+    /* background: #C3EFDC; */
+    background: linear-gradient(180deg, rgba(195, 239, 220, 1) 0%, rgba(142, 212, 180, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1,
@@ -136,20 +140,6 @@ h2 {
         font-size: 1.2rem;
     }
 
-    button {
-        background-color: var(--dark-blue);
-        color: white;
-        font-weight: bold;
-        border: none;
-        border-radius: 0.5rem;
-        opacity: 0.8;
-    }
-
-    button:hover {
-        opacity: 1;
-        cursor: pointer;
-    }
-
     @media (max-width: 600px) {
         .controls {
             grid-template-columns: 1fr;
@@ -158,9 +148,51 @@ h2 {
 
 }
 
+button,
+a.button {
+    background-color: var(--dark-blue);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    opacity: 0.8;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover,
+a.button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.header .button {
+    margin-top: 1rem;
+}
+
 .footer {
     margin-top: 2rem;
     text-align: center;
     font-size: 1.2rem;
     font-style: italic;
+}
+
+p,
+h2 {
+    margin-bottom: 1.2rem;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+ul {
+    margin-bottom: 1.2rem;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
